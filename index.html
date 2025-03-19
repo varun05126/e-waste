@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background: #2c3e50;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .service, .team-member {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        input, textarea, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        button {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">E-Waste</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>Welcome to E-Waste Management</h1>
+        <p>Recycle your electronic waste responsibly. Our mission is to create a sustainable future.</p>
+        <a href="pickup.html" class="btn">Request Pickup</a>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>E-Waste Pickup</h3>
+            <p>We collect and safely dispose of your old electronics.</p>
+        </div>
+        <div class="service">
+            <h3>Data Destruction</h3>
+            <p>We ensure your data is securely wiped before recycling.</p>
+        </div>
+        <div class="service">
+            <h3>Recycling & Refurbishment</h3>
+            <p>Your e-waste is either refurbished for reuse or recycled safely.</p>
+        </div>
+    </section>
+    
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="varun.jpg" alt="Varun Malthumkar">
+                <h3>Varun Malthumkar</h3>
+                <p>Project Leader</p>
+                <p>Varun oversees the entire project, ensuring smooth execution and innovation.</p>
+            </div>
+            <div class="team-member">
+                <img src="sairam.jpg" alt="Sairam">
+                <h3>Sairam</h3>
+                <p>Backend Developer</p>
+                <p>Sairam is responsible for the backend development using Django to power the platform.</p>
+            </div>
+            <div class="team-member">
+                <img src="vishnu.jpg" alt="Vishnu Vardhan">
+                <h3>Vishnu Vardhan</h3>
+                <p>Frontend Developer</p>
+                <p>Vishnu designs and develops the user-friendly interface using React.</p>
+            </div>
+            <div class="team-member">
+                <img src="bindhu.jpg" alt="Bindhu">
+                <h3>Bindhu</h3>
+                <p>UI/UX Designer</p>
+                <p>Bindhu ensures the platform is visually appealing and easy to use.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 E-Waste Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>
