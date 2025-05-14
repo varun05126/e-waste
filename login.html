@@ -10,11 +10,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: 
+#f4f4f4;
             color: #333;
             text-align: center;
         }
-
         .login-container {
             max-width: 400px;
             margin: 50px auto;
@@ -23,16 +23,14 @@
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
         h2 {
-            color: #2c3e50;
+            color: 
+#2c3e50;
         }
-
         form {
             display: flex;
             flex-direction: column;
         }
-
         input {
             margin: 10px 0;
             padding: 10px;
@@ -40,56 +38,39 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
         button {
-            background: #3498db;
+            background: 
+#3498db;
             color: #fff;
             padding: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-
         button:hover {
-            background: #2980b9;
+            background: 
+#2980b9;
         }
-
         .social-login {
             margin-top: 20px;
         }
-
-        .social-login button {
+        .google-login {
             display: block;
             width: 100%;
-            margin: 10px 0;
             padding: 10px;
-            border: none;
-            border-radius: 5px;
+            background: 
+#db4437;
+            color: white;
             font-size: 16px;
+            border-radius: 5px;
             cursor: pointer;
         }
-
-        .google-login {
-            background: #db4437;
-            color: white;
-        }
-
-        .facebook-login {
-            background: #1877f2;
-            color: white;
-        }
-
-        .apple-login {
-            background: #000;
-            color: white;
-        }
-
         .register-link {
             margin-top: 10px;
         }
-
         footer {
-            background: #2c3e50;
+            background: 
+#2c3e50;
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -103,25 +84,46 @@
         <form action="#" method="post">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-            
             <button type="submit">Login</button>
         </form>
-        
         <div class="social-login">
             <p>Or login with:</p>
-            <button class="google-login">Login with Google</button>
-            <button class="facebook-login">Login with Facebook</button>
-            <button class="apple-login">Login with Apple</button>
+            <button class="google-login" onclick="handleGoogleSignIn()">Login with Google</button>
         </div>
-        
         <p class="register-link">Don't have an account? <a href="signup.html">Sign up here</a></p>
     </div>
-    
     <footer>
         <p>&copy; 2025 E-Waste Management. All rights reserved.</p>
     </footer>
+    <!-- Google API Client Library -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        // Initialize the Google API client with your client ID
+        function initializeGoogleSignIn() {
+            gapi.load('auth2', function() {
+                gapi.auth2.init({
+                    client_id: '350035709142-5lmiv7ahmo6075brsl6ran61bmotmrpo.apps.googleusercontent.com'
+                });
+            });
+        }
+        // Handle the Google Sign-In
+        function handleGoogleSignIn() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signIn().then(function(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                var id_token = googleUser.getAuthResponse().id_token;
+                console.log("ID Token: " + id_token);
+                console.log("Full Name: " + profile.getName());
+                console.log("Email: " + profile.getEmail());
+                // You can send the ID token to the server for further processing (e.g., login)
+            });
+        }
+        // Initialize Google Sign-In when the page loads
+        window.onload = function() {
+            initializeGoogleSignIn();
+        };
+    </script>
 </body>
 </html>
