@@ -67,12 +67,23 @@
             padding: 10px 0;
             margin-top: 20px;
         }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="pickup-container">
         <h2>Request an E-Waste Pickup</h2>
         <p>Fill in your details and schedule a pickup for your e-waste.</p>
+        
         <form action="#" method="post">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -87,13 +98,8 @@
             <textarea id="address" name="address" rows="3" required></textarea>
             
             <button type="submit">Request Pickup</button>
-            <div class="service">
-    <h3>E-Waste Pickup</h3>
-    <p>We collect and safely dispose of your old electronics.</p>
-    <a href="request.html" class="btn">Request Pickup</a>
-</div>
         </form>
-        
+
         <div class="map-container">
             <h3>Find Us on Google & Apple Maps</h3>
             <iframe 
@@ -104,7 +110,7 @@
             <a href="https://maps.apple.com/?q=E-Waste+Management" target="_blank">View on Apple Maps</a>
         </div>
     </div>
-    
+
     <footer>
         <p>&copy; 2025 E-Waste Management. All rights reserved.</p>
     </footer>
